@@ -26,21 +26,25 @@
             <i class="fa-solid fa-bars"></i>
           </div>
         </nav>
-        <img src="assets/song.jpeg" alt="songthumbnail" class="song-img" />
-        <h1>Unstoppable</h1>
-        <p>Sia</p>
+        <img
+          src="assets/thumbnails/Unstoppable.jpeg"
+          alt="songthumbnail"
+          class="song-img"
+        />
+        <h1 id="songTitle">Unstoppable</h1>
+        <p id="songArtist">Sia</p>
         <audio id="song">
-          <source src="assets/Unstoppable.mp3" type="audio/mp3" />
+          <source src="assets/songs/Unstoppable.mp3" type="audio/mp3" />
         </audio>
         <input type="range" value="0" id="progress" />
         <div class="controls">
-          <div>
+          <div onclick="playPrevious()">
             <i class="fa-solid fa-backward"></i>
           </div>
           <div onclick="playPause()">
             <i class="fa-solid fa-play" id="ctrlIcon"></i>
           </div>
-          <div>
+          <div onclick="playNext()">
             <i class="fa-solid fa-forward"></i>
           </div>
         </div>
