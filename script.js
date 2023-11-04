@@ -56,17 +56,43 @@ function playPrevious() {
 
 function addSong(title, artist, file, image) {
     songs.push({ title, artist, file, image });
-    updateSongInfo();
+    updatePlaylist();
 }
 
+function togglePlaylist() {
+    var playlistContainer = document.getElementById("playlistContainer");
+    var musicPlayer = document.querySelector(".musicplayer");
+    if (playlistContainer.style.display === "none" || playlistContainer.style.display === "") {
+        playlistContainer.style.display = "block";
+        musicPlayer.style.display = "none";
+    } else {
+        playlistContainer.style.display = "none";
+        musicPlayer.style.display = "block";
+    }
+}
+
+function updatePlaylist() {
+    const playlist = document.getElementById("playlist");
+    playlist.innerHTML = "";
+    songs.forEach((song, index) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${song.title} - ${song.artist}`;
+        listItem.addEventListener("click", () => playSong(index));
+        playlist.appendChild(listItem);
+    });
+}
+
+updatePlaylist();
 updateSongInfo();
 
 function goToMusicPlayer() {
     var home = document.getElementById("home");
     var musicPlayer = document.querySelector(".musicplayer");
-
+    var playlistContainer = document.getElementById("playlistContainer");
     home.style.display = "none";
     musicPlayer.style.display = "block";
+    playlistContainer.style.display = "none";
+
 }
 
 function goToHome() {
@@ -112,4 +138,3 @@ progress.addEventListener("change", function () {
 song.addEventListener("timeupdate", function () {
     progress.value = song.currentTime;
 });
-

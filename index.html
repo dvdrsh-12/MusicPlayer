@@ -22,8 +22,8 @@
           <div class="circle" onclick="goToHome()">
             <i class="fa-solid fa-angle-left"></i>
           </div>
-          <div class="circle">
-            <i class="fa-solid fa-bars"></i>
+          <div class="circle" onclick="togglePlaylist()">
+            <i class="fa-solid fa-bars" id="barsIcon"></i>
           </div>
         </nav>
         <img
@@ -48,6 +48,11 @@
             <i class="fa-solid fa-forward"></i>
           </div>
         </div>
+      </div>
+      <div id="playlistContainer" class="playlistContainer">
+        <h1>Playlist</h1>
+        <ul id="playlist"></ul>
+        <button onclick="goToMusicPlayer()">Start Listening</button>
       </div>
     </div>
     <script src="script.js"></script>

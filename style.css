@@ -136,3 +136,37 @@ nav .circle {
     background: #58A4B0;
     color: #ffe1a8;
 }
+
+.playlistContainer {
+    display: none;
+}
+
+.playlistContainer h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #f7fff7;
+}
+
+.playlistContainer ul {
+    list-style: none;
+}
+
+.playlistContainer ul li {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f7fff7;
+}
+
+.playlistContainer button {
+    background: #ffe1a8;
+    color: #58A4B0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.playlistContainer button:hover {
+    background: #f7fff7;
+}
