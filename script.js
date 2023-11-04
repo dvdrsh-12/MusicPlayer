@@ -1,3 +1,18 @@
+function goToMusicPlayer() {
+    var home = document.getElementById("home");
+    var musicPlayer = document.querySelector(".musicplayer");
+
+    home.style.display = "none";
+    musicPlayer.style.display = "block";
+}
+
+function goToHome() {
+    var home = document.getElementById("home");
+    var musicPlayer = document.querySelector(".musicplayer");
+    musicPlayer.style.display = "none";
+    home.style.display = "block";
+}
+
 let progress = document.getElementById("progress");
 let song = document.getElementById("song");
 let ctrlIcon = document.getElementById("ctrlIcon");
