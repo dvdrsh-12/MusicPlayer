@@ -33,7 +33,6 @@ function updateSongInfo() {
 function playSong(index) {
     const song = document.getElementById("song");
     const ctrlIcon = document.getElementById("ctrlIcon");
-
     song.src = songs[index].file;
     song.load();
     song.play();
@@ -65,7 +64,8 @@ function togglePlaylist() {
     if (playlistContainer.style.display === "none" || playlistContainer.style.display === "") {
         playlistContainer.style.display = "block";
         musicPlayer.style.display = "none";
-    } else {
+    } 
+    else {
         playlistContainer.style.display = "none";
         musicPlayer.style.display = "block";
     }
